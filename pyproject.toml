@@ -1,22 +1,25 @@
 [tool.poetry]
-name = "TBC"
-version = "0.0.0" # Placeholder version for dynamic versioning
-description = "TBC"
-authors = ["TBC"]
+name = "poetry-example"
+version = "0.0.1" # Or 0.0.0 as a placeholder version for dynamic versioning
+description = "Poetry Example/Template"
+authors = ["Your Name <your@email>"]
 license = "MIT"
 readme = "README.md"
-packages = [
-    { include = "src", from = "." }
-]
 exclude = [".gitignore"]
+packages = [
+    { include = "example", from="src" }
+]
+
 
 [tool.poetry.scripts]
-terraform-state-migrator = "src.main:main"
+example = "example.cli:main"
+
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.14"
 logging = "^0.4.9.6"
 argparse = "^1.4.0"
+
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.8.0"
@@ -28,9 +31,13 @@ pyinstaller = "^6.10.0"
 pre-commit = "^3.8.0"
 isort = "^5.13.2"
 
+
 [tool.poetry-dynamic-versioning]
-enable = true
+enable = false
+
 
 [build-system]
-requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
-build-backend = "poetry_dynamic_versioning.backend"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+# requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+# build-backend = "poetry_dynamic_versioning.backend"

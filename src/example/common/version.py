@@ -1,6 +1,6 @@
 """Application Version
 
-This module defines the version of the terraform-state-migrator utility.
+This module defines the version of this example utility.
 
 Attributes:
   __version__ (str): The current version of the utility.
