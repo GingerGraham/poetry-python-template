@@ -1,5 +1,7 @@
-"""Testing package for the project.
+"""Tests package
 
-This module initializes the testing package for the <insert_name> project.
+This module initializes tests for this example project.
+
+Modules:
 
 """

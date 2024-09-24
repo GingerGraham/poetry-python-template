@@ -13,7 +13,7 @@ import logging
 import os
 import sys
 
-from .fstests import is_valid_path
+from example.utils.file_system import is_valid_path
 
 # Default values
 LOG_LEVEL = logging.INFO

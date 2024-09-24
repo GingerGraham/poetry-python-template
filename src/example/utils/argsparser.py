@@ -1,7 +1,7 @@
 """Argument Parsing Module
 
 This module provides utility functions for parsing command-line arguments
-for the <insert_name> application.
+for this example application.
 
 Functions:
     parse_args(): Parses command-line arguments and returns them as a Namespace object.
@@ -10,15 +10,16 @@ Functions:
 
 import argparse
 
-from .version import __version__
+from example.common.name import __app_name__
+from example.common.version import __version__
 
 
 def parse_args():
     """Argument Parser
 
-    Defines the arguments provided by the <insert_name> utility.
+    Defines the arguments provided by the Terraform State Migrator utility.
 
-    Parses command-line arguments for the <insert_name>.
+    Parses command-line arguments for the Terraform State Migrator.
 
     This function sets up an argument parser with options for logging configuration,
     including log file and log level.
@@ -27,9 +28,7 @@ def parse_args():
         argparse.Namespace: Parsed command-line arguments.
     """
 
-    parser = argparse.ArgumentParser(
-        description="<insert_name> v" + __version__
-    )
+    parser = argparse.ArgumentParser(description=f"{__app_name__} v{__version__}")
 
     # Logging configuration
     logging_group = parser.add_argument_group("Logging Configuration")
