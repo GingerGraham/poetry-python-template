@@ -1,6 +1,5 @@
 # Custom exclusions
 temp/
-pylint_results.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
